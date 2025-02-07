@@ -1,0 +1,12 @@
+train: C:\Estudos\postech_ia_para_devs\yolov11\train
+val: C:\Estudos\postech_ia_para_devs\yolov11\val
+
+nc: 1
+names: ['cortante']
+
+roboflow:
+  workspace: hackaton-8tea5
+  project: projeto-deteccao-zrc13
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/hackaton-8tea5/projeto-deteccao-zrc13/dataset/1
