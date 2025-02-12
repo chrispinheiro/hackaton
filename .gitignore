@@ -1,2 +1,5 @@
 *.mp4
-yolo11n.pt
+*.jpg
+*.pt
+./runs
+
