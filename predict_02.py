@@ -3,6 +3,9 @@ from ultralytics import YOLO
 import winsound
 import threading
 import sys
+import os.path
+
+
 
 alarmeCtl = False
 
@@ -14,10 +17,15 @@ def alarme():
         winsound.Beep(2500,500)
     alarmeCtl = False
 
+
 match source:
     case "1":
         print(f"{source} - validando uma imagem.")
-        #model.predict(source='img.jpg', show=True, save=True)
+        source = input("Informe o arquivo JPG para validação: ")
+        if os.path.isfile(source):
+            modelo.predict(source, show=True, save=True)
+        else:
+            print("Arquivo não encontrado!")
         sys.exit()
     case "2":
         print(f"{source} - validando um vídeo.")
@@ -27,10 +35,7 @@ match source:
         modelo.predict(source='0', show=True)
         video = cv2.VideoCapture(0)
     case _:
-        print("That's not a valid value.")
-
-#sys.exit()
-
+        print("Digite valor válido!")
 
 while True:
     check, img = video.read()
