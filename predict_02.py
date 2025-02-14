@@ -21,15 +21,20 @@ def alarme():
 match source:
     case "1":
         print(f"{source} - validando uma imagem.")
-        source = input("Informe o arquivo JPG para validação: ")
-        if os.path.isfile(source):
-            modelo.predict(source, show=True, save=True)
+        imagem = input("Informe o arquivo JPG para validação: ")
+        if os.path.isfile(imagem):
+            modelo.predict(imagem, show=True, save=True)
         else:
             print("Arquivo não encontrado!")
         sys.exit()
     case "2":
         print(f"{source} - validando um vídeo.")
-        video = cv2.VideoCapture('video1.mp4')
+        clipe = input("Informe o arquivo MP4 para validação: ")
+        if os.path.isfile(clipe):
+            video = cv2.VideoCapture(clipe)
+        else:
+            print("Arquivo não encontrado!")
+            sys.exit()
     case "3":
         print(f"{source} - validando câmera.")
         modelo.predict(source='0', show=True)
