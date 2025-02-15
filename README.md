@@ -30,7 +30,7 @@ Grupo 50
   
   04) Arquivos para testes/predição do modelo treinado  
     - yolo11x_custom.pt  
-    - predict.py
+    - predict_02.py
   
   05) Resultados armazenados em ./runs/detect/predictN
   
@@ -41,3 +41,9 @@ Grupo 50
   Executar o script predict_02.py   
   Escolher uma das fontes de informação (imagem, vídeo ou camera)  
   Apontar caminho do arquivo escolhido na etapa anterior, se for o caso  
+
+**Entregáveis:**   
+  https://github.com/chrispinheiro/hackaton - Link do github do projeto  
+  README.MD - Documentação detalhando o fluxo utilizado para o desenvolvimento da solução    
+  video_grupo50.mp4 - Vídeo de até 15 minutos explicando a solução proposta  
+  https://drive.google.com/drive/folders/1JKRRnuPvp0XjKiMG4-5BWHoZ_2M7fYM8?usp=sharing - Link para acesso ao Dataset e ao modelo treinado (yolo11x_custom.pt)
